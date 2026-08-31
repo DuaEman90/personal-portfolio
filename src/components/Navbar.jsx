@@ -25,7 +25,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed left-1/2 top-5 z-50 flex w-fit max-w-[94%] -translate-x-1/2 items-center gap-3">
+    <nav className="fixed left-1/2 top-5 z-50 flex w-fit max-w-[94%] -translate-x-1/2 items-center gap-5">
 
       {/* Logo */}
       <button
