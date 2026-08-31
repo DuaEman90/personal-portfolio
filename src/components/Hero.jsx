@@ -1,6 +1,5 @@
 
 import React from "react";
-import Animation from "../utility/Animation";
 
 function Hero() {
   const scrollToSection = (id) => {
@@ -18,96 +17,126 @@ function Hero() {
       id="home"
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#050816] px-6 pt-24"
     >
-      {/* ================= AURORA BACKGROUND ================= */}
-
-      <div className="absolute inset-0 z-0">
-        <Animation />
+      {/* Background Grid */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.12]">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
       </div>
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 z-[1] bg-[#050816]/55" />
+      {/* Top Glow */}
+      <div className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-400/[0.07] blur-[130px]" />
 
-      {/* Center Glow */}
-      <div className="absolute left-1/2 top-1/2 z-[1] h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-[130px]" />
+      {/* Left Glow */}
+      <div className="pointer-events-none absolute left-[-180px] top-1/2 h-[350px] w-[350px] rounded-full bg-cyan-500/[0.05] blur-[120px]" />
 
-      {/* ================= HERO CONTENT ================= */}
+      {/* Right Glow */}
+      <div className="pointer-events-none absolute bottom-[-180px] right-[-100px] h-[400px] w-[400px] rounded-full bg-blue-500/[0.05] blur-[130px]" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center justify-center text-center">
+      {/* Hero Content */}
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center text-center">
 
-        {/* Availability Badge */}
-        <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-5 py-2.5 text-sm text-cyan-300 shadow-[0_0_25px_rgba(34,211,238,0.08)] backdrop-blur-xl">
-          <span className="h-2 w-2 animate-pulse rounded-full bg-cyan-400 shadow-[0_0_12px_#22d3ee]" />
-          Available for opportunities
-        </div>
-
-        {/* Hello */}
-        <p className="mb-4 text-sm font-medium uppercase tracking-[0.45em] text-cyan-400">
+        {/* Intro */}
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.5em] text-cyan-400 sm:text-sm">
           Hello, I'm
         </p>
 
         {/* Name */}
-        <h1 className="text-6xl font-bold tracking-tight text-white sm:text-7xl md:text-8xl lg:text-9xl">
+        <h1 className="text-5xl font-extrabold tracking-[-0.04em] text-white sm:text-6xl md:text-7xl lg:text-8xl">
           Dua{" "}
-          <span className="text-cyan-400 drop-shadow-[0_0_25px_rgba(34,211,238,0.2)]">
+          <span className="relative text-cyan-400">
             Eman
+            <span className="absolute -bottom-2 left-1/2 h-[3px] w-14 -translate-x-1/2 rounded-full bg-cyan-400/70 blur-[2px]" />
           </span>
         </h1>
 
-        {/* Title */}
-        <h2 className="mt-6 text-2xl font-semibold text-gray-200 sm:text-3xl md:text-4xl">
-          Frontend Web Developer
-        </h2>
+        {/* Professional Title */}
+        <div className="mt-6 flex items-center justify-center gap-3">
+          <span className="hidden h-px w-8 bg-cyan-400/40 sm:block" />
+
+          <h2 className="text-xl font-semibold tracking-wide text-gray-200 sm:text-2xl md:text-3xl">
+            Frontend Web Developer
+          </h2>
+
+          <span className="hidden h-px w-8 bg-cyan-400/40 sm:block" />
+        </div>
 
         {/* Description */}
-        <p className="mt-7 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
-          I build modern, responsive and interactive web experiences
-          with clean code, thoughtful design and modern frontend
+        <p className="mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
+          I create modern, responsive and user-focused web experiences
+          using clean code, thoughtful design and modern frontend
           technologies.
         </p>
 
         {/* Tech Stack */}
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          {["React", "JavaScript", "Tailwind CSS"].map((tech) => (
-            <span
-              key={tech}
-              className="rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-gray-300 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-cyan-300"
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+          {[
+            { name: "React", symbol: "⚛" },
+            { name: "JavaScript", symbol: "JS" },
+            { name: "Tailwind CSS", symbol: "✦" },
+          ].map((tech) => (
+            <div
+              key={tech.name}
+              className="group flex cursor-default items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-gray-300 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-cyan-400/[0.06] hover:text-cyan-300"
             >
-              {tech}
-            </span>
+              <span className="text-xs font-bold text-cyan-400">
+                {tech.symbol}
+              </span>
+
+              {tech.name}
+            </div>
           ))}
         </div>
 
-        {/* ================= BUTTONS ================= */}
-
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-
-          {/* Explore Work */}
+        {/* Explore My Work */}
+        <div className="mt-10 flex items-center justify-center">
           <button
             onClick={() => scrollToSection("projects")}
-            className="group relative overflow-hidden rounded-full bg-cyan-400 px-8 py-3.5 text-sm font-bold text-[#050816] shadow-[0_0_30px_rgba(34,211,238,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-[0_0_40px_rgba(34,211,238,0.35)]"
+            className="group relative cursor-pointer overflow-hidden rounded-full bg-cyan-400 px-9 py-4 text-sm font-bold text-[#050816] shadow-[0_0_35px_rgba(34,211,238,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]"
           >
-            <span className="relative z-10 flex items-center gap-2">
+            <span className="relative z-10 flex items-center gap-2.5">
               Explore My Work
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
+
+              <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
             </span>
 
-            {/* Shine */}
+            {/* Shine Effect */}
             <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
           </button>
-
-          {/* Hire Me */}
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="rounded-full border border-white/10 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-cyan-300"
-          >
-            Hire Me
-          </button>
-
         </div>
 
+        {/* Bottom Info */}
+        <div className="mt-12 flex flex-col items-center gap-4 text-xs text-gray-500 sm:flex-row sm:gap-7">
+          <div className="flex items-center gap-2">
+            <span className="h-1 w-1 rounded-full bg-cyan-400" />
+            Responsive Design
+          </div>
+
+          <span className="hidden text-white/10 sm:block">|</span>
+
+          <div className="flex items-center gap-2">
+            <span className="h-1 w-1 rounded-full bg-cyan-400" />
+            Clean Code
+          </div>
+
+          <span className="hidden text-white/10 sm:block">|</span>
+
+          <div className="flex items-center gap-2">
+            <span className="h-1 w-1 rounded-full bg-cyan-400" />
+            Modern UI/UX
+          </div>
+        </div>
       </div>
+
+      {/* Bottom Fade */}
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050816] to-transparent" />
     </section>
   );
 }
