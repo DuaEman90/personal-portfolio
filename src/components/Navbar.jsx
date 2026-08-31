@@ -25,17 +25,17 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed left-1/2 top-5 z-50 flex w-[94%] max-w-6xl -translate-x-1/2 items-center justify-between gap-4">
+    <nav className="fixed left-1/2 top-5 z-50 flex w-fit max-w-[94%] -translate-x-1/2 items-center gap-3">
 
-      {/* Logo - Outside Pill */}
+      {/* Logo */}
       <button
         onClick={() => scrollToSection("home")}
-        className="group flex h-14 w-14 shrink-0 cursor-pointer items-center justify-center transition-transform duration-300 hover:scale-110"
+        className="group flex h-20 w-20 shrink-0 cursor-pointer items-center justify-center transition-transform duration-300 hover:scale-110"
       >
         <img
           src="/lodo.png"
           alt="DuaEman Logo"
-          className="h-14 w-14 object-contain"
+          className="h-20 w-20 object-contain"
         />
       </button>
 
@@ -65,7 +65,7 @@ function Navbar() {
         ))}
       </div>
 
-      {/* Hire Me - Outside Pill */}
+      {/* Hire Me */}
       <button
         onClick={() => scrollToSection("contact")}
         className="shrink-0 cursor-pointer rounded-full bg-cyan-400 px-5 py-2.5 text-sm font-bold text-[#050816] shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-all duration-300 hover:scale-105 hover:bg-cyan-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.3)]"
@@ -77,6 +77,8 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
 
 
 
