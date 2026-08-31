@@ -1,5 +1,3 @@
-
-import React from "react";
 import Aurora from "./Aurora";
 
 function Animation() {
