@@ -25,12 +25,12 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed left-1/2 top-5 z-50 flex w-fit max-w-[94%] -translate-x-1/2 items-center gap-5">
+    <nav className="fixed left-1/2 top-5 z-50 flex w-fit max-w-[94%] -translate-x-1/2 items-center">
 
       {/* Logo */}
       <button
         onClick={() => scrollToSection("home")}
-        className="group flex h-20 w-20 shrink-0 cursor-pointer items-center justify-center transition-transform duration-300 hover:scale-110"
+        className="group mr-5 flex h-20 w-20 shrink-0 cursor-pointer items-center justify-center transition-transform duration-300 hover:scale-110"
       >
         <img
           src="/lodo.png"
@@ -67,7 +67,7 @@ function Navbar() {
       {/* Hire Me */}
       <button
         onClick={() => scrollToSection("contact")}
-        className="shrink-0 cursor-pointer rounded-full bg-cyan-400 px-5 py-2.5 text-sm font-bold text-[#050816] shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-all duration-300 hover:scale-105 hover:bg-cyan-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.3)]"
+        className="ml-5 shrink-0 cursor-pointer rounded-full bg-cyan-400 px-5 py-2.5 text-sm font-bold text-[#050816] shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-all duration-300 hover:scale-105 hover:bg-cyan-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.3)]"
       >
         Hire Me
       </button>
