@@ -1,79 +1,83 @@
-function Hero() {
+import React, { useState } from "react";
+
+const navItems = [
+  { name: "Home", id: "home" },
+  { name: "About", id: "about" },
+  { name: "Skills", id: "skills" },
+  { name: "Projects", id: "projects" },
+  { name: "Experience", id: "experience" },
+  { name: "Testimonials", id: "testimonials" },
+  { name: "Contact", id: "contact" },
+];
+
+function Navbar() {
+  const [active, setActive] = useState("home");
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+
+    setActive(id);
+  };
+
   return (
-    <section
-      id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-[#040813] px-6 pt-28"
-    >
-      {/* Background Glow */}
-      <div className="absolute left-1/4 top-1/4 h-72 w-72 rounded-full bg-orange-400/10 blur-[120px]" />
+    <nav className="fixed left-1/2 top-5 z-50 w-[94%] max-w-6xl -translate-x-1/2 rounded-full border border-cyan-400/10 bg-[#050816]/75 px-4 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.4)] backdrop-blur-2xl">
 
-      <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-purple-500/10 blur-[120px]" />
+      <div className="flex items-center justify-between gap-4">
 
-      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 md:grid-cols-2">
+        {/* ================= DE LOGO ================= */}
 
-        {/* Hero Text */}
-        <div>
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-orange-400">
-            Hello, I'm
-          </p>
+        <button
+          onClick={() => scrollToSection("home")}
+          className="group flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:scale-105 hover:border-cyan-400/40 hover:bg-cyan-400/10"
+        >
+          <img
+            src="/images/DE-logo.png"
+            alt="DuaEman Logo"
+            className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-110"
+          />
+        </button>
 
-          <h1 className="text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-            Dua<span className="text-orange-400">Eman</span>
-          </h1>
+        {/* ================= NAVIGATION ================= */}
 
-          <h2 className="mt-4 text-2xl font-semibold text-gray-300 sm:text-3xl">
-            Frontend Web Developer
-          </h2>
+        <div className="hidden items-center gap-1 md:flex">
 
-          <p className="mt-6 max-w-xl text-base leading-7 text-gray-400 sm:text-lg">
-            I create modern, responsive and user-friendly web experiences
-            using React, JavaScript, Tailwind CSS and modern frontend
-            technologies.
-          </p>
-
-          {/* Buttons */}
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="/resume.pdf"
-              download
-              className="rounded-full bg-orange-400 px-7 py-3 font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-orange-300"
-            >
-              Download Resume
-            </a>
-
+          {navItems.map((item) => (
             <button
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="rounded-full border border-white/20 px-7 py-3 font-semibold text-white transition-all duration-300 hover:border-orange-400 hover:text-orange-400"
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`rounded-full px-4 py-2.5 text-sm font-medium transition-all duration-300 ${
+                active === item.id
+                  ? "bg-white text-[#050816] shadow-[0_0_20px_rgba(255,255,255,0.12)]"
+                  : "text-gray-400 hover:bg-white/5 hover:text-cyan-300"
+              }`}
             >
-              Hire Me
+              {item.name}
             </button>
-          </div>
+          ))}
+
         </div>
 
-        {/* Profile Image */}
-        <div className="flex justify-center md:justify-end">
-          <div className="relative">
+        {/* ================= HIRE ME ================= */}
 
-            <div className="absolute inset-0 rounded-full bg-orange-400/20 blur-3xl" />
-
-            <div className="relative h-72 w-72 overflow-hidden rounded-full border border-white/10 bg-white/5 p-2 sm:h-80 sm:w-80">
-              <img
-                src="/images/profile.png"
-                alt="DuaEman"
-                className="h-full w-full rounded-full object-cover"
-              />
-            </div>
-
-          </div>
-        </div>
+        <button
+          onClick={() => scrollToSection("contact")}
+          className="shrink-0 rounded-full bg-cyan-400 px-5 py-2.5 text-sm font-bold text-[#050816] shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-all duration-300 hover:scale-105 hover:bg-cyan-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.3)]"
+        >
+          Hire Me
+        </button>
 
       </div>
-    </section>
+    </nav>
   );
 }
 
-export default Hero;
+export default Navbar;
+
+
+
