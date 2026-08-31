@@ -7,7 +7,6 @@ const navItems = [
   { name: "Skills", id: "skills" },
   { name: "Projects", id: "projects" },
   { name: "Experience", id: "experience" },
-  { name: "Testimonials", id: "testimonials" },
   { name: "Contact", id: "contact" },
 ];
 
@@ -38,7 +37,7 @@ function Navbar() {
           <img
             src="lodo.png"
             alt="DuaEman Logo"
-            className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-110"
+            className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
           />
         </button>
 

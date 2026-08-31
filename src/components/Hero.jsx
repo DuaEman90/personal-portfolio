@@ -12,6 +12,14 @@ function Hero() {
     }
   };
 
+  const skills = [
+    { name: "HTML", symbol: "◇" },
+    { name: "CSS", symbol: "✦" },
+    { name: "JavaScript", symbol: "JS" },
+    { name: "React.js", symbol: "⚛" },
+    { name: "Tailwind CSS", symbol: "✦" },
+  ];
+
   return (
     <section
       id="home"
@@ -39,24 +47,20 @@ function Hero() {
       <div className="pointer-events-none absolute bottom-[-180px] right-[-100px] h-[400px] w-[400px] rounded-full bg-blue-500/[0.05] blur-[130px]" />
 
       {/* Hero Content */}
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center text-center">
-
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+        
         {/* Intro */}
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.5em] text-cyan-400 sm:text-sm">
           Hello, I'm
         </p>
 
         {/* Name */}
-        <h1 className="text-5xl font-extrabold tracking-[-0.04em] text-white sm:text-6xl md:text-7xl lg:text-8xl">
-          Dua{" "}
-          <span className="relative text-cyan-400">
-            Eman
-            <span className="absolute -bottom-2 left-1/2 h-[3px] w-14 -translate-x-1/2 rounded-full bg-cyan-400/70 blur-[2px]" />
-          </span>
+        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+          Dua <span className="text-cyan-400">Eman</span>
         </h1>
 
         {/* Professional Title */}
-        <div className="mt-6 flex items-center justify-center gap-3">
+        <div className="mt-5 flex items-center justify-center gap-3">
           <span className="hidden h-px w-8 bg-cyan-400/40 sm:block" />
 
           <h2 className="text-xl font-semibold tracking-wide text-gray-200 sm:text-2xl md:text-3xl">
@@ -67,34 +71,36 @@ function Hero() {
         </div>
 
         {/* Description */}
-        <p className="mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
-          I create modern, responsive and user-focused web experiences
-          using clean code, thoughtful design and modern frontend
-          technologies.
+        <p className="mt-5 max-w-2xl text-base leading-7 text-gray-400 sm:text-lg">
+          I build modern, responsive and user-focused websites using HTML,
+          CSS, JavaScript, React.js and Tailwind CSS, with a focus on clean
+          code, creative design and seamless user experiences.
         </p>
 
-        {/* Tech Stack */}
-        <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-          {[
-            { name: "React", symbol: "⚛" },
-            { name: "JavaScript", symbol: "JS" },
-            { name: "Tailwind CSS", symbol: "✦" },
-          ].map((tech) => (
-            <div
-              key={tech.name}
-              className="group flex cursor-default items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-gray-300 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-cyan-400/[0.06] hover:text-cyan-300"
-            >
-              <span className="text-xs font-bold text-cyan-400">
-                {tech.symbol}
-              </span>
+        {/* Skills */}
+        <div className="mt-8">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
+            My Skills
+          </p>
 
-              {tech.name}
-            </div>
-          ))}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {skills.map((skill) => (
+              <div
+                key={skill.name}
+                className="group flex items-center gap-2 rounded-lg border border-cyan-400/20 bg-cyan-400/[0.06] px-4 py-2.5 text-sm font-medium text-gray-200 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:bg-cyan-400/10 hover:text-cyan-300"
+              >
+                <span className="font-bold text-cyan-400">
+                  {skill.symbol}
+                </span>
+
+                {skill.name}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Explore My Work */}
-        <div className="mt-10 flex items-center justify-center">
+        <div className="mt-9 flex items-center justify-center">
           <button
             onClick={() => scrollToSection("projects")}
             className="group relative cursor-pointer overflow-hidden rounded-full bg-cyan-400 px-9 py-4 text-sm font-bold text-[#050816] shadow-[0_0_35px_rgba(34,211,238,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]"
@@ -113,7 +119,7 @@ function Hero() {
         </div>
 
         {/* Bottom Info */}
-        <div className="mt-12 flex flex-col items-center gap-4 text-xs text-gray-500 sm:flex-row sm:gap-7">
+        <div className="mt-10 flex flex-col items-center gap-4 text-xs text-gray-500 sm:flex-row sm:gap-7">
           <div className="flex items-center gap-2">
             <span className="h-1 w-1 rounded-full bg-cyan-400" />
             Responsive Design
@@ -142,4 +148,3 @@ function Hero() {
 }
 
 export default Hero;
-
