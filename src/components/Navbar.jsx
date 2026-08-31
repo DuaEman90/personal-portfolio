@@ -30,16 +30,13 @@ function Navbar() {
       <div className="flex items-center justify-between gap-4">
 
         {/* Logo */}
-        <button
-          onClick={() => scrollToSection("home")}
-          className="group flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:scale-105 hover:border-cyan-400/40 hover:bg-cyan-400/10"
-        >
+        
           <img
             src="lodo.png"
             alt="DuaEman Logo"
             className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
           />
-        </button>
+       
 
         {/* Navigation */}
         <div className="hidden items-center gap-1 md:flex">
