@@ -53,7 +53,6 @@ function Navbar() {
           >
             {item.name}
 
-            {/* Hover Bottom Line */}
             <span
               className={`absolute bottom-1 left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-cyan-400 transition-all duration-300 ${
                 active === item.id
@@ -77,12 +76,4 @@ function Navbar() {
 }
 
 export default Navbar;
-
-
-
-
-
-
-
-
 
