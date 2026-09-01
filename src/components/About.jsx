@@ -25,10 +25,10 @@ function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-[#050816] px-5 py-24 sm:px-8 md:py-32"
+      className="relative overflow-hidden bg-[#06091a] px-5 py-24 sm:px-8 md:py-32"
     >
       {/* ================= BACKGROUND GRID ================= */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.035]">
+      <div className="pointer-events-none absolute inset-0 opacity-[0.04]">
         <div
           className="absolute inset-0"
           style={{
@@ -39,10 +39,10 @@ function About() {
         />
       </div>
 
-      {/* ================= GLOW ================= */}
-      <div className="pointer-events-none absolute left-[-180px] top-1/3 h-[400px] w-[400px] rounded-full bg-cyan-500/[0.05] blur-[140px]" />
+      {/* ================= BACKGROUND GLOW ================= */}
+      <div className="pointer-events-none absolute left-[-180px] top-1/3 h-[400px] w-[400px] rounded-full bg-cyan-500/[0.06] blur-[140px]" />
 
-      <div className="pointer-events-none absolute bottom-[-180px] right-[-150px] h-[400px] w-[400px] rounded-full bg-blue-600/[0.05] blur-[140px]" />
+      <div className="pointer-events-none absolute bottom-[-180px] right-[-150px] h-[400px] w-[400px] rounded-full bg-blue-600/[0.06] blur-[140px]" />
 
       {/* ================= MAIN CONTAINER ================= */}
       <div className="relative z-10 mx-auto max-w-6xl">
@@ -151,7 +151,7 @@ function About() {
                   </h4>
                 </div>
 
-                {/* LOGO */}
+                {/* ================= LOGO ================= */}
                 <div className="relative flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/[0.06] p-2 shadow-[0_0_25px_rgba(34,211,238,0.08)]">
                   <div className="pointer-events-none absolute inset-0 rounded-xl bg-cyan-400/[0.05] blur-md" />
 
@@ -180,7 +180,7 @@ function About() {
                   ].map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-medium text-gray-300 transition-all duration-300 hover:border-cyan-400/30 hover:bg-cyan-400/[0.06] hover:text-cyan-300"
+                      className="rounded-lg border border-cyan-400/20 bg-cyan-400/[0.045] px-3 py-2 text-xs font-medium text-cyan-200 shadow-[0_0_18px_rgba(34,211,238,0.08)] transition-all duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/[0.08] hover:text-cyan-100"
                     >
                       {tech}
                     </span>
@@ -190,7 +190,6 @@ function About() {
 
               {/* ================= EDUCATION ================= */}
               <div className="relative mt-8 overflow-hidden rounded-2xl border border-white/10 bg-black/10 p-5">
-                {/* Education Glow */}
                 <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-cyan-400/[0.05] blur-2xl" />
 
                 <div className="relative flex items-start gap-4">
@@ -234,34 +233,34 @@ function About() {
           {infoCards.map((card) => (
             <div
               key={card.number}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-all duration-500 hover:-translate-y-2 hover:border-cyan-400/30 hover:bg-cyan-400/[0.025] hover:shadow-[0_15px_50px_rgba(34,211,238,0.08)]"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 shadow-[0_10px_40px_rgba(34,211,238,0.035)] transition-all duration-500 hover:-translate-y-2 hover:border-cyan-400/30 hover:bg-cyan-400/[0.025] hover:shadow-[0_15px_50px_rgba(34,211,238,0.08)]"
             >
-              {/* Bottom Light */}
-              <div className="pointer-events-none absolute -bottom-16 left-1/2 h-28 w-40 -translate-x-1/2 rounded-full bg-cyan-400/[0.13] blur-[45px] opacity-0 transition-all duration-500 group-hover:opacity-100" />
+              {/* ================= PERMANENT BOTTOM CYAN LIGHT ================= */}
+              <div className="pointer-events-none absolute -bottom-16 left-1/2 h-28 w-40 -translate-x-1/2 rounded-full bg-cyan-400/[0.14] blur-[45px]" />
 
-              {/* Blue Side Glow */}
-              <div className="pointer-events-none absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-blue-500/[0.12] blur-[35px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              {/* ================= PERMANENT BLUE LIGHT ================= */}
+              <div className="pointer-events-none absolute -bottom-10 -right-10 h-20 w-20 rounded-full bg-blue-500/[0.10] blur-[35px]" />
 
-              {/* Number + Icon */}
+              {/* ================= NUMBER + ICON ================= */}
               <div className="relative flex items-center justify-between">
                 <span className="text-xs font-bold tracking-[0.2em] text-cyan-400/70">
                   {card.number}
                 </span>
 
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/15 bg-cyan-400/[0.06] text-lg transition-all duration-500 group-hover:rotate-3 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/[0.1]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/15 bg-cyan-400/[0.06] text-lg shadow-[0_0_18px_rgba(34,211,238,0.06)] transition-all duration-500 group-hover:rotate-3 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/[0.1]">
                   {card.icon}
                 </div>
               </div>
 
-              {/* Line */}
+              {/* ================= LINE ================= */}
               <div className="relative mt-5 h-px w-10 bg-white/10 transition-all duration-500 group-hover:w-16 group-hover:bg-cyan-400/40" />
 
-              {/* Title */}
+              {/* ================= TITLE ================= */}
               <h4 className="relative mt-5 text-lg font-semibold text-white">
                 {card.title}
               </h4>
 
-              {/* Text */}
+              {/* ================= TEXT ================= */}
               <p className="relative mt-3 text-sm leading-6 text-gray-500">
                 {card.text}
               </p>
@@ -271,7 +270,7 @@ function About() {
       </div>
 
       {/* ================= BOTTOM FADE ================= */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#050816] to-transparent" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#06091a] to-transparent" />
     </section>
   );
 }
