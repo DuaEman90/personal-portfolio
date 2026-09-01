@@ -29,20 +29,20 @@ function Hero() {
 
       <div className="pointer-events-auto absolute inset-0 z-0">
         <CursorGrid
-          cellSize={65}
-          color="#22D3EE"
-          radius={160}
-          falloff="smooth"
-          holdTime={350}
-          fadeDuration={900}
-          lineWidth={1.1}
-          maxOpacity={0.8}
-          fillOpacity={0.035}
-          gridOpacity={0.10}
-          cellRadius={2}
-          clickPulse={true}
-          pulseSpeed={650}
-        />
+  cellSize={65}
+  color="#22D3EE"
+  radius={180}
+  falloff="smooth"
+  holdTime={400}
+  fadeDuration={750}
+  lineWidth={1.3}
+  maxOpacity={1}
+  fillOpacity={0.06}
+  gridOpacity={0.16}
+  cellRadius={2}
+  clickPulse={true}
+  pulseSpeed={550}
+/>
       </div>
 
       {/* ================= BACKGROUND GLOW ================= */}
