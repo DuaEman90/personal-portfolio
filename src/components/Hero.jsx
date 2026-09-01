@@ -1,4 +1,5 @@
 import React from "react";
+import CursorGrid from "./CursorGrid";
 
 function Hero() {
   const scrollToSection = (id) => {
@@ -22,49 +23,38 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#050816] px-5 pt-24"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#050816] px-5"
     >
-      {/* Background Grid */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(34,211,238,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.35) 1px, transparent 1px)",
-            backgroundSize: "55px 55px",
-          }}
-        />
+      {/* ================= CURSOR GRID ================= */}
+      <div className="absolute inset-0 z-0">
+        <CursorGrid />
       </div>
 
-      {/* Top Glow */}
-      <div className="pointer-events-none absolute left-1/2 top-[-250px] h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-cyan-500/[0.08] blur-[140px]" />
+      {/* ================= DARK OVERLAY ================= */}
+      <div className="pointer-events-none absolute inset-0 z-[1] bg-[#050816]/55" />
 
-      {/* Left Glow */}
-      <div className="pointer-events-none absolute left-[-250px] top-1/2 h-[450px] w-[450px] rounded-full bg-blue-600/[0.08] blur-[150px]" />
+      {/* ================= TOP GLOW ================= */}
+      <div className="pointer-events-none absolute left-1/2 top-[-280px] z-[1] h-[600px] w-[850px] -translate-x-1/2 rounded-full bg-cyan-500/[0.09] blur-[150px]" />
 
-      {/* Right Glow */}
-      <div className="pointer-events-none absolute bottom-[-250px] right-[-200px] h-[500px] w-[500px] rounded-full bg-cyan-500/[0.06] blur-[150px]" />
+      {/* ================= LEFT GLOW ================= */}
+      <div className="pointer-events-none absolute left-[-250px] top-1/2 z-[1] h-[450px] w-[450px] -translate-y-1/2 rounded-full bg-blue-600/[0.07] blur-[150px]" />
 
-      {/* Decorative Circles */}
-      <div className="pointer-events-none absolute left-[8%] top-[30%] h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.9)]" />
+      {/* ================= RIGHT GLOW ================= */}
+      <div className="pointer-events-none absolute bottom-[-250px] right-[-200px] z-[1] h-[500px] w-[500px] rounded-full bg-cyan-500/[0.06] blur-[150px]" />
 
-      <div className="pointer-events-none absolute right-[12%] top-[25%] h-1.5 w-1.5 rounded-full bg-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.9)]" />
+      {/* ================= DECORATIVE DOTS ================= */}
+      <div className="pointer-events-none absolute left-[10%] top-[32%] z-[2] h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.9)]" />
 
-      <div className="pointer-events-none absolute bottom-[25%] left-[18%] h-1.5 w-1.5 rounded-full bg-cyan-400" />
+      <div className="pointer-events-none absolute right-[12%] top-[27%] z-[2] h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.9)]" />
 
-      <div className="pointer-events-none absolute bottom-[30%] right-[18%] h-2 w-2 rounded-full bg-blue-400" />
+      <div className="pointer-events-none absolute bottom-[27%] left-[17%] z-[2] h-1.5 w-1.5 rounded-full bg-cyan-400" />
 
-      {/* Main Content */}
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+      <div className="pointer-events-none absolute bottom-[30%] right-[18%] z-[2] h-1.5 w-1.5 rounded-full bg-blue-400" />
 
-        {/* Availability Badge */}
-        <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/[0.06] px-5 py-2.5 text-xs font-medium text-cyan-300 shadow-[0_0_25px_rgba(34,211,238,0.06)] backdrop-blur-md sm:text-sm">
-          <span className="h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.9)]" />
+      {/* ================= HERO CONTENT ================= */}
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl -translate-y-5 flex-col items-center text-center sm:-translate-y-7">
 
-          Available for opportunities
-        </div>
-
-        {/* Intro */}
+        {/* Hello */}
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.5em] text-cyan-400 sm:text-sm">
           Hello, I'm
         </p>
@@ -75,46 +65,51 @@ function Hero() {
           <span className="text-cyan-400">Eman</span>
         </h1>
 
-        {/* Small Line */}
+        {/* Main Heading */}
         <div className="mt-5 flex items-center justify-center gap-3">
-          <span className="hidden h-px w-12 bg-gradient-to-r from-transparent to-cyan-400/70 sm:block" />
+          <span className="hidden h-px w-10 bg-gradient-to-r from-transparent to-cyan-400/70 sm:block" />
 
-          <h2 className="text-xl font-semibold tracking-wide text-gray-200 sm:text-2xl md:text-3xl">
-            Frontend{" "}
-            <span className="text-cyan-400">Web Developer</span>
+          <h2 className="max-w-3xl text-xl font-semibold leading-relaxed tracking-wide text-gray-200 sm:text-2xl md:text-3xl">
+            I’m a{" "}
+            <span className="text-cyan-400">
+              Frontend Web Developer
+            </span>{" "}
+            crafting modern digital experiences
           </h2>
 
-          <span className="hidden h-px w-12 bg-gradient-to-l from-transparent to-cyan-400/70 sm:block" />
+          <span className="hidden h-px w-10 bg-gradient-to-l from-transparent to-cyan-400/70 sm:block" />
         </div>
 
         {/* Description */}
         <p className="mt-6 max-w-2xl text-sm leading-7 text-gray-400 sm:text-base sm:leading-8 md:text-lg">
-          I create modern, responsive and user-focused web experiences
-          with clean code, creative interfaces and powerful frontend
-          technologies.
+          I turn ideas into clean, responsive and engaging websites using
+          modern frontend technologies, creative interfaces and thoughtful
+          user experiences.
         </p>
 
-        {/* Tech Stack */}
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          {skills.map((skill) => (
-            <div
-              key={skill.name}
-              className="group flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm text-gray-300 shadow-[0_10px_35px_rgba(0,0,0,0.15)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-cyan-400/[0.06] hover:text-white"
-            >
-              <span className="flex h-7 min-w-7 items-center justify-center rounded-md border border-cyan-400/20 bg-cyan-400/10 px-1 text-[10px] font-bold text-cyan-400">
-                {skill.icon}
-              </span>
+        {/* ================= SKILLS ================= */}
+        <div className="mt-8">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {skills.map((skill) => (
+              <div
+                key={skill.name}
+                className="group flex items-center gap-2.5 rounded-xl border border-cyan-400/15 bg-white/[0.035] px-4 py-2.5 text-sm font-medium text-gray-300 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:bg-cyan-400/[0.07] hover:text-white hover:shadow-[0_0_20px_rgba(34,211,238,0.08)]"
+              >
+                <span className="flex h-7 min-w-7 items-center justify-center rounded-md border border-cyan-400/20 bg-cyan-400/10 px-1 text-[10px] font-bold text-cyan-400">
+                  {skill.icon}
+                </span>
 
-              <span>{skill.name}</span>
-            </div>
-          ))}
+                <span>{skill.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Main CTA */}
-        <div className="mt-10">
+        {/* ================= CTA ================= */}
+        <div className="mt-9">
           <button
             onClick={() => scrollToSection("projects")}
-            className="group flex cursor-pointer items-center gap-3 rounded-full bg-cyan-400 px-8 py-4 text-sm font-bold text-[#050816] shadow-[0_0_30px_rgba(34,211,238,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-[0_0_45px_rgba(34,211,238,0.3)]"
+            className="group flex cursor-pointer items-center gap-3 rounded-full bg-cyan-400 px-8 py-3.5 text-sm font-bold text-[#050816] shadow-[0_0_30px_rgba(34,211,238,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-[0_0_45px_rgba(34,211,238,0.32)]"
           >
             Explore My Work
 
@@ -124,34 +119,31 @@ function Hero() {
           </button>
         </div>
 
-        {/* Developer Code Card */}
-        
-
-        {/* Bottom Features */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-xs text-gray-500">
+        {/* ================= FEATURES ================= */}
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-gray-500 sm:gap-x-7">
           <span className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.7)]" />
             Responsive Design
           </span>
 
           <span className="hidden text-white/10 sm:block">|</span>
 
           <span className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.7)]" />
             Clean Code
           </span>
 
           <span className="hidden text-white/10 sm:block">|</span>
 
           <span className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.7)]" />
             Modern UI/UX
           </span>
         </div>
       </div>
 
-      {/* Bottom Fade */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050816] to-transparent" />
+      {/* ================= BOTTOM FADE ================= */}
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-[3] h-28 bg-gradient-to-t from-[#050816] to-transparent" />
     </section>
   );
 }
