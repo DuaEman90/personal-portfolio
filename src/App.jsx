@@ -1,11 +1,13 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About"; 
 
 function App() {
   return (
     <main className="bg-[#040813]">
       <Navbar />
       <Hero />
+      <About/>
 
       {/* Temporary sections */}
       <section id="about" className="min-h-screen bg-[#080d18]" />
