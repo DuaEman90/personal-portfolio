@@ -25,24 +25,14 @@ function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-[#06091a] px-5 py-24 sm:px-8 md:py-32"
+      className="relative overflow-hidden bg-[#080B1F] px-5 py-24 sm:px-8 md:py-32"
     >
-      {/* ================= BACKGROUND GRID ================= */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.04]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(34,211,238,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.5) 1px, transparent 1px)",
-            backgroundSize: "65px 65px",
-          }}
-        />
-      </div>
-
       {/* ================= BACKGROUND GLOW ================= */}
-      <div className="pointer-events-none absolute left-[-180px] top-1/3 h-[400px] w-[400px] rounded-full bg-cyan-500/[0.06] blur-[140px]" />
+      <div className="pointer-events-none absolute left-[-180px] top-1/3 h-[400px] w-[400px] rounded-full bg-cyan-500/[0.055] blur-[140px]" />
 
-      <div className="pointer-events-none absolute bottom-[-180px] right-[-150px] h-[400px] w-[400px] rounded-full bg-blue-600/[0.06] blur-[140px]" />
+      <div className="pointer-events-none absolute bottom-[-180px] right-[-150px] h-[400px] w-[400px] rounded-full bg-blue-600/[0.055] blur-[140px]" />
+
+      <div className="pointer-events-none absolute left-1/2 top-[-180px] h-[300px] w-[500px] -translate-x-1/2 rounded-full bg-cyan-500/[0.025] blur-[130px]" />
 
       {/* ================= MAIN CONTAINER ================= */}
       <div className="relative z-10 mx-auto max-w-6xl">
@@ -235,7 +225,7 @@ function About() {
               key={card.number}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 shadow-[0_10px_40px_rgba(34,211,238,0.035)] transition-all duration-500 hover:-translate-y-2 hover:border-cyan-400/30 hover:bg-cyan-400/[0.025] hover:shadow-[0_15px_50px_rgba(34,211,238,0.08)]"
             >
-              {/* ================= PERMANENT BOTTOM CYAN LIGHT ================= */}
+              {/* ================= PERMANENT CYAN LIGHT ================= */}
               <div className="pointer-events-none absolute -bottom-16 left-1/2 h-28 w-40 -translate-x-1/2 rounded-full bg-cyan-400/[0.14] blur-[45px]" />
 
               {/* ================= PERMANENT BLUE LIGHT ================= */}
@@ -270,7 +260,7 @@ function About() {
       </div>
 
       {/* ================= BOTTOM FADE ================= */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#06091a] to-transparent" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#080B1F] to-transparent" />
     </section>
   );
 }
