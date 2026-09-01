@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import "./CursorGrid.css";
+import "./CursorGrid.jsx";
 
 const FALLOFF_CURVES = {
   linear: (t) => t,
