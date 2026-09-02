@@ -157,6 +157,7 @@ function Hero() {
                 hover:border-cyan-400/50
                 hover:bg-cyan-400/[0.07]
                 hover:text-white
+                cursor-pointer
               "
             >
               <span
