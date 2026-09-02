@@ -249,7 +249,7 @@ function Skills() {
 
               <a
                 href="/resume.pdf"
-                download="Dua-Eman-Resume.pdf"
+                download="resume.pdf"
                 className="group inline-flex shrink-0 cursor-pointer items-center gap-3 rounded-full bg-cyan-400 px-7 py-3.5 text-sm font-bold text-[#06091a] shadow-[0_0_30px_rgba(34,211,238,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-[0_0_50px_rgba(34,211,238,0.35)]"
               >
                 <Download
