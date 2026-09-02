@@ -2,7 +2,6 @@
 import React from "react";
 import {
   Github,
-  Figma,
   Globe,
   Layers3,
   ExternalLink,
