@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About"; 
 import Skills from "./components/Skills";
-
+import Projects from "./components/Projects";
 function App() {
   return (
     <main className="bg-[#040813]">
@@ -10,6 +10,7 @@ function App() {
       <Hero />
       <About/>
       <Skills />
+      <Projects />
    
       {/* Temporary sections */}
       <section id="about" className="min-h-screen bg-[#080d18]" />
