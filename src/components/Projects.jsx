@@ -10,9 +10,10 @@ const Projects = () => {
       description:
         "A clean and responsive personal portfolio website designed to showcase my skills, projects, education and frontend development journey. The layout focuses on a simple professional interface with well-organized sections and a smooth browsing experience across different screen sizes.",
       tech: ["HTML", "CSS"],
-      image: "portfolio.png",
+      image: "/portfolio.png",
       link: "https://scintillating-bienenstitch-0ce7db.netlify.app/",
     },
+
     {
       number: "02",
       title: "Savora",
@@ -20,9 +21,10 @@ const Projects = () => {
       description:
         "A creative food and makeup website that combines two visually engaging categories in one modern interface. The website presents food-related content alongside makeup-focused sections, using attractive layouts, clear content organization and responsive design to create an enjoyable browsing experience.",
       tech: ["React", "Tailwind CSS"],
-      image: "savora.png",
+      image: "/savora.png",
       link: "https://savora-flr1sm4xx-dua-eman.vercel.app/",
     },
+
     {
       number: "03",
       title: "Coder Gym",
@@ -30,9 +32,10 @@ const Projects = () => {
       description:
         "A modern gym website created with a bold and energetic fitness-focused interface. It presents the gym experience through structured sections, strong visual hierarchy and responsive layouts, making the website easy to explore while maintaining a professional and engaging fitness aesthetic.",
       tech: ["React", "Tailwind CSS"],
-      image: "codergym.png",
+      image: "/codergym.png",
       link: "https://coder-gym-rho.vercel.app/",
     },
+
     {
       number: "04",
       title: "Real Estate",
@@ -40,8 +43,19 @@ const Projects = () => {
       description:
         "A modern real estate website focused on showcasing beautiful houses and properties in some of the best and most desirable areas. The interface is designed to make property exploration simple, with an elegant layout, organized information and a responsive experience for different screen sizes.",
       tech: ["React", "Tailwind CSS"],
-      image: "realestate.png",
+      image: "/realestate.png",
       link: "https://real-estate-ten-puce-90.vercel.app/",
+    },
+
+    {
+      number: "05",
+      title: "Velora by Dua Eman",
+      category: "E-Commerce Store",
+      description:
+        "A modern e-commerce store designed with a clean and elegant interface to provide a smooth online shopping experience. The website focuses on attractive product presentation, organized sections, responsive layouts and a user-friendly browsing experience across different screen sizes.",
+      tech: ["React", "Tailwind CSS"],
+      image: "/Velora.png",
+      link: "https://e-commerce-beta-blue-47.vercel.app/",
     },
   ];
 
@@ -76,14 +90,17 @@ const Projects = () => {
           {projects.map((project) => (
             <article
               key={project.number}
-              className="group relative w-full max-w-[480px]"
+              className={`group relative w-full max-w-[480px] ${
+                project.number === "05"
+                  ? "md:col-span-2 md:justify-self-center"
+                  : ""
+              }`}
             >
               {/* Card */}
-              <div className="relative ov
-              erflow-hidden rounded-[22px] border border-white/10 bg-white/[0.035] p-2.5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
+              <div className="relative overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.035] p-2 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
                 
                 {/* Image */}
-                <div className="relative h-[175px] overflow-hidden rounded-[16px] border border-white/5 bg-[#0b1025]">
+                <div className="relative h-[250px] overflow-hidden rounded-[16px] border border-white/5 bg-[#0b1025]">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -105,7 +122,7 @@ const Projects = () => {
                 </div>
 
                 {/* Content */}
-                <div className="px-2.5 pb-2.5 pt-4">
+                <div className="px-2 pb-2 pt-3.5">
                   
                   {/* Title */}
                   <div className="flex items-center justify-between gap-3">
@@ -119,38 +136,29 @@ const Projects = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="mt-2.5 text-[12px] leading-[1.65] text-gray-400">
+                  <p className="mt-2 text-[12px] leading-[1.6] text-gray-400">
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
-                  <div className="mt-4">
-                    <p className="mb-2 text-[9px] font-semibold uppercase tracking-[0.25em] text-gray-500">
-                      Technologies
-                    </p>
-
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((item) => (
-                        <span
-                          key={item}
-                          className="rounded-lg border border-cyan-400/20 bg-cyan-400/[0.07] px-2.5 py-1.5 text-[10px] font-semibold text-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.05)] transition-all duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/10"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Bottom Area */}
-                  <div className="mt-4 flex items-center justify-between border-t border-white/[0.07] pt-3">
+                  {/* Technologies + View Project */}
+                  <div className="mt-3.5 flex items-end justify-between gap-3 border-t border-white/[0.07] pt-3">
+                    
+                    {/* Technologies */}
                     <div>
-                      <p className="text-[9px] uppercase tracking-widest text-gray-600">
-                        Built With
+                      <p className="mb-2 text-[9px] font-semibold uppercase tracking-[0.25em] text-gray-500">
+                        Technologies
                       </p>
 
-                      <p className="mt-1 text-[10px] font-medium text-gray-400">
-                        {project.tech.join(" • ")}
-                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((item) => (
+                          <span
+                            key={item}
+                            className="rounded-lg border border-cyan-400/20 bg-cyan-400/[0.07] px-2.5 py-1.5 text-[10px] font-semibold text-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.05)] transition-all duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/10"
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </div>
                     </div>
 
                     {/* View Project */}
@@ -158,9 +166,10 @@ const Projects = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/button inline-flex items-center gap-1.5 rounded-lg border border-cyan-400/30 bg-cyan-400/[0.08] px-3.5 py-2 text-[10px] font-semibold text-cyan-300 transition-all duration-300 hover:border-cyan-400/60 hover:bg-cyan-400/15 hover:text-cyan-200"
+                      className="group/button inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-cyan-400/30 bg-cyan-400/[0.08] px-3.5 py-2 text-[10px] font-semibold text-cyan-300 transition-all duration-300 hover:border-cyan-400/60 hover:bg-cyan-400/15 hover:text-cyan-200"
                     >
                       View Project
+
                       <ExternalLink
                         size={12}
                         className="transition-transform duration-300 group-hover/button:translate-x-0.5"
