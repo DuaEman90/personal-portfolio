@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import {
@@ -128,17 +127,17 @@ const Skills = () => {
           {/* =================================================
               TOOLS — MOVE LEFT
           ================================================= */}
-          <div className="relative mb-6 overflow-hidden">
+          <div className="relative mb-6 overflow-hidden py-2">
 
             {/* Soft edge fade */}
-            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#06091a] to-transparent" />
+            <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-24 bg-gradient-to-r from-[#06091a] to-transparent" />
 
-            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#06091a] to-transparent" />
+            <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-24 bg-gradient-to-l from-[#06091a] to-transparent" />
 
-            <div className="skills-track-left flex w-max py-3">
+            <div className="skills-track-left flex w-max">
 
               {/* FIRST SET */}
-              <div className="flex shrink-0 items-center gap-12">
+              <div className="flex shrink-0 items-center gap-14 px-3">
                 {tools.map((tool) => {
                   const Icon = tool.icon;
 
@@ -148,13 +147,38 @@ const Skills = () => {
                       href={tool.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex shrink-0 cursor-pointer flex-col items-center justify-center"
+                      className="group flex shrink-0 cursor-pointer flex-col items-center justify-center px-2 py-2"
                     >
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-transparent transition-all duration-300 group-hover:border-cyan-400/20 group-hover:bg-cyan-400/[0.06] group-hover:shadow-[0_0_25px_rgba(34,211,238,0.15)]">
-                        <Icon className="text-[28px] text-slate-400 transition-all duration-300 group-hover:text-cyan-400 group-hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
+                      <div
+                        className="
+                          flex h-14 w-14 items-center justify-center
+                          rounded-2xl
+                          border border-transparent
+                          transition-all duration-300
+                          group-hover:border-cyan-400/30
+                          group-hover:bg-cyan-400/[0.07]
+                          group-hover:shadow-[0_0_30px_rgba(34,211,238,0.18)]
+                        "
+                      >
+                        <Icon
+                          className="
+                            text-[32px]
+                            text-slate-400
+                            transition-all duration-300
+                            group-hover:text-cyan-400
+                            group-hover:drop-shadow-[0_0_9px_rgba(34,211,238,0.55)]
+                          "
+                        />
                       </div>
 
-                      <span className="mt-1 text-[10px] font-medium text-slate-500 transition-colors duration-300 group-hover:text-cyan-300">
+                      <span
+                        className="
+                          mt-1 text-[10px] font-medium
+                          text-slate-500
+                          transition-colors duration-300
+                          group-hover:text-cyan-300
+                        "
+                      >
                         {tool.name}
                       </span>
                     </a>
@@ -162,8 +186,8 @@ const Skills = () => {
                 })}
               </div>
 
-              {/* SECOND SET — EXACT DUPLICATE */}
-              <div className="flex shrink-0 items-center gap-12 pl-12">
+              {/* SECOND SET */}
+              <div className="flex shrink-0 items-center gap-14 px-3">
                 {tools.map((tool) => {
                   const Icon = tool.icon;
 
@@ -173,49 +197,100 @@ const Skills = () => {
                       href={tool.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex shrink-0 cursor-pointer flex-col items-center justify-center"
+                      className="group flex shrink-0 cursor-pointer flex-col items-center justify-center px-2 py-2"
                     >
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-transparent transition-all duration-300 group-hover:border-cyan-400/20 group-hover:bg-cyan-400/[0.06] group-hover:shadow-[0_0_25px_rgba(34,211,238,0.15)]">
-                        <Icon className="text-[28px] text-slate-400 transition-all duration-300 group-hover:text-cyan-400 group-hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
+                      <div
+                        className="
+                          flex h-14 w-14 items-center justify-center
+                          rounded-2xl
+                          border border-transparent
+                          transition-all duration-300
+                          group-hover:border-cyan-400/30
+                          group-hover:bg-cyan-400/[0.07]
+                          group-hover:shadow-[0_0_30px_rgba(34,211,238,0.18)]
+                        "
+                      >
+                        <Icon
+                          className="
+                            text-[32px]
+                            text-slate-400
+                            transition-all duration-300
+                            group-hover:text-cyan-400
+                            group-hover:drop-shadow-[0_0_9px_rgba(34,211,238,0.55)]
+                          "
+                        />
                       </div>
 
-                      <span className="mt-1 text-[10px] font-medium text-slate-500 transition-colors duration-300 group-hover:text-cyan-300">
+                      <span
+                        className="
+                          mt-1 text-[10px] font-medium
+                          text-slate-500
+                          transition-colors duration-300
+                          group-hover:text-cyan-300
+                        "
+                      >
                         {tool.name}
                       </span>
                     </a>
                   );
                 })}
               </div>
+
             </div>
           </div>
 
           {/* =================================================
               LANGUAGES — MOVE RIGHT
           ================================================= */}
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden py-2">
 
             {/* Soft edge fade */}
-            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#06091a] to-transparent" />
+            <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-24 bg-gradient-to-r from-[#06091a] to-transparent" />
 
-            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#06091a] to-transparent" />
+            <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-24 bg-gradient-to-l from-[#06091a] to-transparent" />
 
-            <div className="skills-track-right flex w-max py-3">
+            <div className="skills-track-right flex w-max">
 
               {/* FIRST SET */}
-              <div className="flex shrink-0 items-center gap-12">
+              <div className="flex shrink-0 items-center gap-14 px-3">
                 {languages.map((language) => {
                   const Icon = language.icon;
 
                   return (
                     <div
                       key={language.name}
-                      className="group flex shrink-0 cursor-pointer flex-col items-center justify-center"
+                      className="group flex shrink-0 cursor-pointer flex-col items-center justify-center px-2 py-2"
                     >
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-transparent transition-all duration-300 group-hover:border-blue-400/20 group-hover:bg-blue-400/[0.06] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]">
-                        <Icon className="text-[28px] text-slate-400 transition-all duration-300 group-hover:text-blue-400 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
+                      <div
+                        className="
+                          flex h-14 w-14 items-center justify-center
+                          rounded-2xl
+                          border border-transparent
+                          transition-all duration-300
+                          group-hover:border-blue-400/30
+                          group-hover:bg-blue-400/[0.07]
+                          group-hover:shadow-[0_0_30px_rgba(59,130,246,0.18)]
+                        "
+                      >
+                        <Icon
+                          className="
+                            text-[32px]
+                            text-slate-400
+                            transition-all duration-300
+                            group-hover:text-blue-400
+                            group-hover:drop-shadow-[0_0_9px_rgba(59,130,246,0.55)]
+                          "
+                        />
                       </div>
 
-                      <span className="mt-1 text-[10px] font-medium text-slate-500 transition-colors duration-300 group-hover:text-blue-300">
+                      <span
+                        className="
+                          mt-1 text-[10px] font-medium
+                          text-slate-500
+                          transition-colors duration-300
+                          group-hover:text-blue-300
+                        "
+                      >
                         {language.name}
                       </span>
                     </div>
@@ -223,27 +298,53 @@ const Skills = () => {
                 })}
               </div>
 
-              {/* SECOND SET — EXACT DUPLICATE */}
-              <div className="flex shrink-0 items-center gap-12 pl-12">
+              {/* SECOND SET */}
+              <div className="flex shrink-0 items-center gap-14 px-3">
                 {languages.map((language) => {
                   const Icon = language.icon;
 
                   return (
                     <div
                       key={`duplicate-${language.name}`}
-                      className="group flex shrink-0 cursor-pointer flex-col items-center justify-center"
+                      className="group flex shrink-0 cursor-pointer flex-col items-center justify-center px-2 py-2"
                     >
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-transparent transition-all duration-300 group-hover:border-blue-400/20 group-hover:bg-blue-400/[0.06] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]">
-                        <Icon className="text-[28px] text-slate-400 transition-all duration-300 group-hover:text-blue-400 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
+                      <div
+                        className="
+                          flex h-14 w-14 items-center justify-center
+                          rounded-2xl
+                          border border-transparent
+                          transition-all duration-300
+                          group-hover:border-blue-400/30
+                          group-hover:bg-blue-400/[0.07]
+                          group-hover:shadow-[0_0_30px_rgba(59,130,246,0.18)]
+                        "
+                      >
+                        <Icon
+                          className="
+                            text-[32px]
+                            text-slate-400
+                            transition-all duration-300
+                            group-hover:text-blue-400
+                            group-hover:drop-shadow-[0_0_9px_rgba(59,130,246,0.55)]
+                          "
+                        />
                       </div>
 
-                      <span className="mt-1 text-[10px] font-medium text-slate-500 transition-colors duration-300 group-hover:text-blue-300">
+                      <span
+                        className="
+                          mt-1 text-[10px] font-medium
+                          text-slate-500
+                          transition-colors duration-300
+                          group-hover:text-blue-300
+                        "
+                      >
                         {language.name}
                       </span>
                     </div>
                   );
                 })}
               </div>
+
             </div>
           </div>
         </div>
@@ -262,6 +363,7 @@ const Skills = () => {
             <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-cyan-400/10 blur-[70px] transition-all duration-500 group-hover:bg-cyan-400/20" />
 
             <div className="relative z-10">
+
               <div className="mb-7 flex items-center justify-between">
 
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/10">
@@ -319,6 +421,7 @@ const Skills = () => {
             <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-blue-500/10 blur-[70px] transition-all duration-500 group-hover:bg-blue-500/20" />
 
             <div className="relative z-10">
+
               <div className="mb-7 flex items-center justify-between">
 
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-blue-400/20 bg-blue-400/10">
@@ -376,15 +479,12 @@ const Skills = () => {
       <style>{`
         .skills-track-left {
           animation: skillsLeft 24s linear infinite;
+          will-change: transform;
         }
 
         .skills-track-right {
           animation: skillsRight 24s linear infinite;
-        }
-
-        .skills-track-left:hover,
-        .skills-track-right:hover {
-          animation-play-state: paused;
+          will-change: transform;
         }
 
         @keyframes skillsLeft {
@@ -416,6 +516,13 @@ const Skills = () => {
             animation-duration: 20s;
           }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+          .skills-track-left,
+          .skills-track-right {
+            animation-duration: 40s;
+          }
+        }
       `}</style>
 
       {/* Bottom Fade */}
@@ -425,4 +532,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
