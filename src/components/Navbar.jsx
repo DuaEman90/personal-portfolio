@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 const navItems = [
@@ -5,7 +6,6 @@ const navItems = [
   { name: "About", id: "about" },
   { name: "Skills", id: "skills" },
   { name: "Projects", id: "projects" },
-  { name: "Experience", id: "experience" },
   { name: "Contact", id: "contact" },
 ];
 
@@ -15,18 +15,18 @@ function Navbar() {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
 
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
+    if (!section) return;
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
 
     setActive(id);
   };
 
   return (
     <nav className="fixed left-1/2 top-5 z-50 flex w-fit max-w-[94%] -translate-x-1/2 items-center">
-
       {/* Logo */}
       <button
         onClick={() => scrollToSection("home")}
