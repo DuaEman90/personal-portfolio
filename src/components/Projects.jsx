@@ -7,14 +7,15 @@ const Projects = () => {
   const projects = [
     {
       number: "01",
-      title: "Personal Portfolio",
-      category: "Personal Website",
+      title: "Velora",
+      category: "E-Commerce Store",
       description:
-        "A clean and responsive personal portfolio website designed to showcase my skills, projects, education and frontend development journey.",
-      tech: ["HTML", "CSS"],
-      image: "/portfolio.png",
-      link: "https://scintillating-bienenstitch-0ce7db.netlify.app/",
+        "A modern e-commerce store focused on attractive product presentation, organized sections and a smooth shopping experience.",
+      tech: ["React", "Tailwind CSS"],
+      image: "/Velora.png",
+      link: "https://e-commerce-beta-blue-47.vercel.app/",
     },
+    
     {
       number: "02",
       title: "Savora",
@@ -37,6 +38,16 @@ const Projects = () => {
     },
     {
       number: "04",
+      title: "Personal Portfolio",
+      category: "Personal Website",
+      description:
+        "A clean and responsive personal portfolio website designed to showcase my skills, projects, education and frontend development journey.",
+      tech: ["HTML", "CSS"],
+      image: "/portfolio.png",
+      link: "https://scintillating-bienenstitch-0ce7db.netlify.app/",
+    },
+    {
+      number: "05",
       title: "Real Estate",
       category: "Property Website",
       description:
@@ -45,16 +56,7 @@ const Projects = () => {
       image: "/realestate.png",
       link: "https://real-estate-ten-puce-90.vercel.app/",
     },
-    {
-      number: "05",
-      title: "Velora",
-      category: "E-Commerce Store",
-      description:
-        "A modern e-commerce store focused on attractive product presentation, organized sections and a smooth shopping experience.",
-      tech: ["React", "Tailwind CSS"],
-      image: "/Velora.png",
-      link: "https://e-commerce-beta-blue-47.vercel.app/",
-    },
+   
   ];
 
   const [activeProject, setActiveProject] = useState(0);
